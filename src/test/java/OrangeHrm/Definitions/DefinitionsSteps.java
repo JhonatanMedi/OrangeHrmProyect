@@ -21,6 +21,7 @@ public class DefinitionsSteps {
     private ButtonPages buttonPages = new ButtonPages(driver);
     private LeavePage leavePage = new LeavePage(driver);
 
+    //prueba git
 
     @Given("^the user open browser$")
     public void openBroswer() {
@@ -66,5 +67,4 @@ public class DefinitionsSteps {
         this.leavePage = new LeavePage(driver);
         this.leavePage.searchEmployee(typesLeave);
     }
-
 }
