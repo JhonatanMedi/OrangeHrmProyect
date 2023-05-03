@@ -29,7 +29,7 @@ public class Questions {
     }
 
     @Step
-    public void tituloAssert() {
+    public void prueba() {
 
         String ActualTitle = driver.getTitle();
         Assert.assertEquals(ActualTitle, "Booking.com");
@@ -79,5 +79,4 @@ public class Questions {
         String employee = driver.findElement(By.xpath("//div[@class = 'orangehrm-edit-employee-name']//h6")).getText();
         Assert.assertEquals(employee,firstName +" "+ lastName );
     }
-
 }
