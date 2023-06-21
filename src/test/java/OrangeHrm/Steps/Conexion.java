@@ -1,8 +1,8 @@
 package OrangeHrm.Steps;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -19,7 +19,7 @@ public class Conexion {
 	public WebDriver openBrowser() {
 		ChromeOptions option = new ChromeOptions();
 		option.addArguments("--remote-allow-origins=*");
-		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver(option);
 		driver.manage().window().maximize();
 		driver.navigate().to("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
